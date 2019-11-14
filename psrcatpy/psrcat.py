@@ -6,10 +6,11 @@ import numpy as np
 import subprocess as sp
 from astropy.coordinates import SkyCoord
 from astropy import units as u
-import params
 import logging
 import sys
-import json_parser
+
+import psrcatpy.params as params
+import psrcatpy.json_parser as json_parser
 
 logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', level=logging.INFO)
 

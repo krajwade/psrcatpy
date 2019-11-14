@@ -3,10 +3,10 @@
 # A wrapper class to run psrcat and generate the JSON dictionary with pulsar parameters
 import numpy as np
 import logging
-import params
 import json
 from jinja2 import Template
 
+import psrcatpy.params as params
 
 log = logging.getLogger('json_parser')
 
