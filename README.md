@@ -1,6 +1,7 @@
 PSRCATPY
 
 #########################################
+
 A very simple python package that finds all sources within a certain radius of a position.
 
 It expects psrcat to be installed and on $PATH of the system
