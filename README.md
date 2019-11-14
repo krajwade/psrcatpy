@@ -1,4 +1,5 @@
-#PSRCATPY
+PSRCATPY
+
 #########################################
 A very simple python package that finds all sources within a certain radius of a position.
 
@@ -6,7 +7,13 @@ It expects psrcat to be installed and on $PATH of the system
 
 Provides a nice wrapper around the psrcat queries and returns a JSON string of all parameters that we asked for
 
+At the moment it takes a fixed number parameters (Name, Period, DM, RA, DEC, S1400) but will be made flexible soon
+
+Also returns only those sources that have all these parameter values populated in the psrcat database.
+
 Requirements:
+
+psrcat installed
 
 Works on python 3.7
 
