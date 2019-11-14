@@ -24,10 +24,10 @@ Usage:
 
 example usage:
 
-import psrcatpy
+`import psrcatpy`
 
-psr = psrcatpy.PsrCat("JNAME P0 DM RAJ DECJ S1400","03:29:54.2", "+54:52:56", 10.0, 5.0, 10.0)
+`psr = psrcatpy.PsrCat("JNAME P0 DM RAJ DECJ S1400","03:29:54.2", "+54:52:56", 10.0, 5.0, 10.0)`
 
-json = psr.run_query()
+`json = psr.run_query()`
 
 #########################################
