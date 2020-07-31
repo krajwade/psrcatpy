@@ -24,7 +24,7 @@ class Params():
         try:
             logging.info("Parsing pulsar parameters....")
             self.name = name
-            self.period = period) # period in seconds
+            self.period = period # period in seconds
             self.dm = dm #DM in pc cm^-3
             self.ra = ra # RA in degrees
             self.dec = dec #DEC in degrees
