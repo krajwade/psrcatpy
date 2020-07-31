@@ -24,12 +24,12 @@ class Params():
         try:
             logging.info("Parsing pulsar parameters....")
             self.name = name
-            self.period = float(period)   # period in seconds
-            self.dm = float(dm)
+            self.period = period) # period in seconds
+            self.dm = dm #DM in pc cm^-3
             self.ra = ra # RA in degrees
-            self.dec = dec# DEC in degrees
-            self.s1400 = float(s1400) # flux in Jy
-            self.offset = float(offset) # offset in degrees
+            self.dec = dec #DEC in degrees
+            self.s1400 = s1400
+            self.offset = offset #offset in degrees
 
         except ValueError as error:
             logging.error("Error on parsing arguments")

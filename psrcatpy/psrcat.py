@@ -77,7 +77,7 @@ class PsrCat():
         corner_ra_max, corner_ra_min, corner_dec_max, corner_dec_min = self.generate_box()
         binaryCommand = "psrcat"
         condition= "'raj < " + str(corner_ra_max) + " && raj > " + str(corner_ra_min) + " && decj < " + str(corner_dec_max) + " && decj > " + str(corner_dec_min) + "'"
-        Cmd = " ".join((binaryCommand, self.param_flag,"'", self.param_list,"'", self.condition_flag,condition, " |grep -v '*'"))
+        Cmd = " ".join((binaryCommand, self.param_flag,"'", self.param_list,"'", self.condition_flag,condition))
         logging.info("Running command...")
         logging.info(Cmd)
 
