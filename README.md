@@ -38,4 +38,10 @@ example usage:
 
 `json = psr.run_query()`
 
+In order to get different parameters of the pulsars you can do the following after running the query
+
+`dm = psr.params[0].dm`
+`name = psr.params[0].name`
+
+and so on..
 #########################################
