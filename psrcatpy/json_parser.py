@@ -13,7 +13,7 @@ log = logging.getLogger('json_parser')
 class JSONParser:
 
         def __init__(self, params):
-            self.params = params
+            self._params = params
             self.template =  Template(''' 
             "Pulsars": {
                            {% for name, period, dm, ra, dec, s1400, offset in pulsars %}
@@ -31,7 +31,6 @@ class JSONParser:
                       ''' )
 
         def generate_json(self):
-          
             names = []
             periods = []
             dms = []
@@ -39,14 +38,14 @@ class JSONParser:
             decs = []
             s1400s = []
             offsets = []
-            for i in range(len(self.params)):
-                names.append(self.params[i].name)
-                periods.append(self.params[i].period)
-                dms.append(self.params[i].dm)
-                ras.append(self.params[i].ra)
-                decs.append(self.params[i].dec)
-                s1400s.append(self.params[i].s1400)
-                offsets.append(self.params[i].offset)
+            for i in range(len(self._params)):
+                names.append(self._params[i].name)
+                periods.append(self._params[i].period)
+                dms.append(self._params[i].dm)
+                ras.append(self._params[i].ra)
+                decs.append(self._params[i].dec)
+                s1400s.append(self._params[i].s1400)
+                offsets.append(self._params[i].offset)
 
             json_string = self.template.render(pulsars=zip(names,periods,dms,ras,decs,s1400s,offsets))
             return json_string
